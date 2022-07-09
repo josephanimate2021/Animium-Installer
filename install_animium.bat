@@ -49,7 +49,12 @@ echo Time to choose. && goto wrapperidle
 cls
 echo Cloning repository from GitHub...
 if exist .git (
+if not exist %USERPROFILE%\Downloads (
+goto installmaingit
+) else (
 cd %USERPROFILE%\Downloads
+)
+:installmaingit
 :: the portable git does not work for some people. So this should help a little. The user needs to have git installed first.
 if not exist Animium-Installer\PortableGit\bin\git.exe (
 git clone https://github.com/KiaWeb/Animium.git
@@ -57,7 +62,12 @@ git clone https://github.com/KiaWeb/Animium.git
 call Animium-Installer\PortableGit\bin\git.exe clone https://github.com/KiaWeb/Animium.git
 )
 ) else (
+if not exist %USERPROFILE%\Downloads (
+goto installmain
+) else (
 cd %USERPROFILE%\Downloads
+)
+:installmain
 :: the portable git does not work for some people. So this should help a little. The user needs to have git installed first.
 if not exist Animium-Installer-main\Animium-Installer-main\PortableGit\bin\git.exe (
 git clone https://github.com/KiaWeb/Animium.git
