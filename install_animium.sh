@@ -4,4 +4,3 @@ echo Installing some npm packages...
 cd Animium
 sudo bash ./installDepends.sh
 echo "Animium is sucessfully installed!"
-pause
