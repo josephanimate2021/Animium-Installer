@@ -1,5 +1,5 @@
 echo Installing Animium...
-git clone --single-branch --branch chromeos https://github.com/KiaWeb/Animium.git
+git clone --single-branch --branch chromeos-beta https://github.com/KiaWeb/Animium.git
 echo Installing some packages...
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt-get install -y nodejs
